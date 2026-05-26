@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bug Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header>
+      <h1>Bug Tracker</h1>
+      <p>Track and manage bugs in your app with local storage persistence.</p>
+    </header>
+
+    <section class="bug-form-section">
+      <form id="bug-form">
+        <div class="form-row">
+          <label for="bug-title">Title</label>
+          <input type="text" id="bug-title" placeholder="Enter bug title" required />
+        </div>
+
+        <div class="form-row">
+          <label for="bug-description">Description</label>
+          <textarea id="bug-description" rows="4" placeholder="Describe the bug" required></textarea>
+        </div>
+
+        <div class="form-row form-grid">
+          <div>
+            <label for="bug-severity">Severity</label>
+            <select id="bug-severity">
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="bug-assigned">Assigned To</label>
+            <input type="text" id="bug-assigned" placeholder="Assignee name" required />
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Add Bug</button>
+          <button type="reset" class="btn btn-secondary">Clear</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="bug-list-section">
+      <div class="toolbar">
+        <div class="toolbar-left">
+          <h2>Bug List</h2>
+          <span id="bug-count">0 bugs</span>
+        </div>
+        <div class="toolbar-right">
+          <label for="status-filter">Filter:</label>
+          <select id="status-filter">
+            <option value="All">All</option>
+            <option value="Open">Open</option>
+            <option value="Closed">Closed</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="bug-list" class="bug-list"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

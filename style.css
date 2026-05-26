@@ -1,0 +1,207 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.app-shell {
+  width: min(1080px, 100%);
+}
+
+header {
+  margin-bottom: 1.75rem;
+}
+
+header h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2rem, 2.5vw, 3rem);
+}
+
+header p {
+  margin: 0;
+  color: #94a3b8;
+}
+
+.bug-form-section,
+.bug-list-section {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  margin-bottom: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 0.85rem 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn {
+  border: none;
+  border-radius: 0.85rem;
+  padding: 0.85rem 1.25rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-secondary {
+  background: #1e293b;
+  color: #cbd5e1;
+}
+
+.btn:hover {
+  opacity: 0.95;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-start;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.toolbar-left h2 {
+  margin: 0;
+}
+
+#bug-count {
+  display: inline-block;
+  margin-left: 1rem;
+  color: #94a3b8;
+}
+
+.bug-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.bug-card {
+  border: 1px solid #1f2937;
+  border-radius: 1rem;
+  background: #111827;
+  padding: 1.25rem;
+}
+
+.bug-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.badge {
+  display: inline-flex;
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.badge-open {
+  background: #0f766e;
+  color: #d1fae5;
+}
+
+.badge-closed {
+  background: #6b7280;
+  color: #f8fafc;
+}
+
+.bug-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+}
+
+.bug-description {
+  margin: 0 0 1rem;
+  color: #cbd5e1;
+}
+
+.bug-details {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: #94a3b8;
+}
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.action-buttons .btn {
+  flex: 1;
+}
+
+.btn-danger {
+  background: #dc2626;
+  color: white;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 1rem;
+  }
+
+  .toolbar,
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
